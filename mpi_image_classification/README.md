@@ -8,13 +8,13 @@ Pipeline graph
 
 Dataset
 -----------------------------
-This smaller imagenet dataset is a subset of the official one, saved in \\pengwa01\shares\training\autoresize\imagenet\2012
+This is the full official imagenet dataset, saved in \\pengwa01\shares\training\autoresize\imagenet\2012
 
-- training dataset contains 9100 images (7 categories * 1300 images per category)
-- validation dataset contains 350 images (7 categories * 50 images per category)
+- training dataset contains 1.2m images (1000 categories * 1200 images per category)
+- validation dataset contains 50k images (1000 categories * 50 images per category)
 
 Need to use zip file here to avoid perf issue in mounting file dataset with many sub-folders.
 
 Results
 -----------------------------
-See logs in [this pipeline run](https://ml.azure.com/experiments/id/ee38a17a-5dc2-4ceb-ad52-c02b64de3762/runs/e58ad610-bb53-436a-a8d8-9b5116d5c888?wsid=/subscriptions/4aaa645c-5ae2-4ae9-a17a-84b9023bc56a/resourcegroups/itp-pilot-ResGrp/workspaces/itp-pilot&tid=72f988bf-86f1-41af-91ab-2d7cd011db47).
+See logs in [this pipeline run](https://ml.azure.com/experiments/id/b67b7e5e-f825-48e2-b879-530c06e0f047/runs/0bb4c726-ac71-4725-8568-ba4609a999ee?wsid=/subscriptions/4aaa645c-5ae2-4ae9-a17a-84b9023bc56a/resourcegroups/itp-pilot-ResGrp/workspaces/itp-pilot&tid=72f988bf-86f1-41af-91ab-2d7cd011db47).
