@@ -33,6 +33,8 @@ import numpy as np
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 from PIL import Image
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 DATA_BACKEND_CHOICES = ['pytorch', 'syntetic']
 try:
