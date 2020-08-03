@@ -1,4 +1,4 @@
-Image classification distributed training pipeline
+Image classification distributed training pipeline on ITP compute
 =========================================
 This is a sample to demonstrate distributed training in azure machine learning. In this pipeline, we use designer built-in modules to do image preprocessing on cpu nodes, and a mpi custom module on distributed gpu nodes.
 
@@ -17,4 +17,4 @@ Need to use zip file here to avoid perf issue in mounting file dataset with many
 
 Results
 -----------------------------
-See logs in [this pipeline run](https://ml.azure.com/experiments/id/b67b7e5e-f825-48e2-b879-530c06e0f047/runs/0bb4c726-ac71-4725-8568-ba4609a999ee?wsid=/subscriptions/4aaa645c-5ae2-4ae9-a17a-84b9023bc56a/resourcegroups/itp-pilot-ResGrp/workspaces/itp-pilot&tid=72f988bf-86f1-41af-91ab-2d7cd011db47).
+See logs in [this pipeline run](https://ml.azure.com/experiments/id/b67b7e5e-f825-48e2-b879-530c06e0f047/runs/17f6ded8-6210-4b0f-8f1e-d1286cafe04d?wsid=/subscriptions/4aaa645c-5ae2-4ae9-a17a-84b9023bc56a/resourcegroups/itp-pilot-ResGrp/workspaces/itp-pilot&tid=72f988bf-86f1-41af-91ab-2d7cd011db47).
