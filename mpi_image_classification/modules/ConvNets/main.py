@@ -534,9 +534,9 @@ if __name__ == '__main__':
         os.makedirs(args.workspace)
 
     # override the master node ip by intention
-    # args.dist_url = 'tcp://' + get_master_ip() + ':23456'
+    args.dist_url = 'tcp://' + get_master_ip() + ':23456'
     # extract master ip from os env as a workaround
-    args.dist_url = 'tcp://' + os.environ["AZ_BATCHAI_MPI_MASTER_NODE"] + ':23456'
+    # args.dist_url = 'tcp://' + os.environ["AZ_BATCHAI_MPI_MASTER_NODE"] + ':23456'
 
     ngpus_per_node = torch.cuda.device_count()
     args.distributed = args.world_size > 1

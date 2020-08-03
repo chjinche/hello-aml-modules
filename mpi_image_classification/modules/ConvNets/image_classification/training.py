@@ -552,8 +552,8 @@ def train_loop(model_and_loss,
     is_first_rank = not torch.distributed.is_initialized() or torch.distributed.get_rank() == 0
     if is_first_rank:
         ts = str(time.time())
-        # logdir = os.path.expanduser('~/tensorboard/{}/logs/'.format(os.environ['DLTS_JOB_ID']) + ts)
-        logdir = os.path.expanduser('~/tensorboard/{}/logs/'.format(os.environ['AZ_BATCH_JOB_ID']) + ts)
+        logdir = os.path.expanduser('~/tensorboard/{}/logs/'.format(os.environ['DLTS_JOB_ID']) + ts)
+        # logdir = os.path.expanduser('~/tensorboard/{}/logs/'.format(os.environ['AZ_BATCH_JOB_ID']) + ts)
         print("tensorboard at ", logdir)
         if not os.path.exists(logdir):
             os.makedirs(logdir)
