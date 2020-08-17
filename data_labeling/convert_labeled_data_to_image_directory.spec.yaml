@@ -1,0 +1,29 @@
+#  This is an auto generated module spec yaml file.
+#  For more details, please refer to https://aka.ms/azureml-module-specs
+amlModuleIdentifier:
+  moduleName: Convert Labeled Data to Image Directory
+  moduleVersion: 0.0.1
+implementation:
+  container:
+    amlEnvironment:
+      python:
+        condaDependenciesFile: conda.yaml
+    args:
+    - --labeled_dataset
+    - inputPath: Labeled dataset
+    - --output_image_dir
+    - outputPath: Output image directory
+    command:
+    - python
+    - convert_labeled_data_to_image_directory.py
+inputs:
+- name: Labeled dataset
+  type: AzureMLDataset
+  argumentName: labeled_dataset
+metadata:
+  annotations:
+    codegenBy: dsl.module
+outputs:
+- name: Output image directory
+  type: ImageDirectory
+  argumentName: output_image_dir
