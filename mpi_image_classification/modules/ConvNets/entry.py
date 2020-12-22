@@ -7,8 +7,8 @@ from multiprocessing.pool import ThreadPool
 from multiprocessing import cpu_count
 import functools
 from enum import Enum
-from azureml.pipeline.wrapper import dsl
-from azureml.pipeline.wrapper.dsl.module import ModuleExecutor, InputFile, OutputFile, EnumParameter, IntParameter, FloatParameter, StringParameter
+from azure.ml.component import dsl
+from azure.ml.component.dsl._component import ComponentExecutor, EnumParameter, IntParameter, FloatParameter, StringParameter
 
 
 class Data_BackendEnum(Enum):
@@ -69,7 +69,7 @@ def convert_image_directory_to_specific_format(image_dir_path, output_root, is_t
     return output_root
 
 
-@dsl.module()
+@dsl._component()
 def main(
     train_data: StringParameter(description='path to train dataset') = None,
     val_data: StringParameter(description='path to valid dataset') = None,
@@ -136,4 +136,4 @@ def main(
 
 
 if __name__ == '__main__':
-    ModuleExecutor(main).execute(sys.argv)
+    ComponentExecutor(main).execute(sys.argv)
